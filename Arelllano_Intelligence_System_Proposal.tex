@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{setspace} % For line spacing
+\geometry{margin=1in}
+
+
+% Make section headers the same size as the body text
+\titleformat{\section}[block]{\normalfont\normalsize\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}[block]{\normalfont\normalsize\bfseries}{\thesubsection}{1em}{}
+
+% Set paragraph indentation
+%\setlength{\parindent}{15pt} % Adjust the value if you want more or less indentation
+
+% Set line spacing to 1.5
+\onehalfspacing
+
+\title{\textbf{Predictive Model for Lung Health Issues Based on Smoking History}}
+\author{Carlo P. Arellano}
+\date{October 2024}
+
+\begin{document}
+
+\maketitle
+
+\section*{Introduction}
+
+Lung disease is one of the most prominent health issues globally, largely due to smoking. Smoking contributes to a range of lung-related health problems such as chronic obstructive pulmonary disease (COPD), emphysema, and lung cancer (Chandran et al., 2022). According to Haaf et al. (2017), smoking duration, the age at which smoking begins, and total exposure to cigarette smoke are critical factors influencing the risk of developing lung disease. Given the high global incidence of smoking-related diseases, there is a pressing need for predictive models to help identify individuals most at risk.
+
+This proposal outlines a project aimed at developing a machine learning model to predict the likelihood of lung disease in individuals based on their smoking history. The key predictors will be age, age at which smoking started, and the duration of smoking. This project could be used as a screening tool for clinicians and public health campaigns aimed at early intervention and prevention.
+
+\section*{Objectives}
+
+\begin{enumerate}
+    \item Develop a machine learning model that predicts the likelihood of lung health issues based on:
+    \begin{enumerate}
+        \item Age
+        \item Age started smoking
+        \item Duration of smoking
+        \item Presence of lung problems such as COPD or lung cancer
+    \end{enumerate}
+    \item Validate the model using a dataset of patients with documented smoking history and lung health outcomes.
+    \item Create an online tool that clinicians and individuals can use to assess their risk of lung disease based on smoking history.
+\end{enumerate}
+
+\section*{Methodology}
+
+\subsection*{A. Data Collection}
+
+In this study, since it will be a proposal just to test our knowledge in our lesson, I will be using hypothetical datasets that are somewhat similar to existing datasets from public health records and research studies that document smoking behavior and lung health outcomes, such as the \textit{Cancer Epidemiology, Biomarkers \& Prevention} book found online by the American Association for Cancer Research. In their article about Machine Learning and Real-World Data to Predict Lung Cancer Risk in Routine Care (2022), the study utilized machine learning to create a 3-year lung cancer risk prediction model based on extensive real-world data, focusing primarily on a younger population.
+
+The dataset will include the following fields: current age, age at which smoking started, smoking duration, and whether the individual has a lung health issue (diagnosed COPD, lung cancer, etc.).
+
+\subsection*{B. Model Development}
+
+A binary classification machine learning model (e.g., logistic regression or a neural network) will be built to predict the probability of lung disease based on the input variables (age, smoking start age, smoking duration). The model will be trained and validated using a portion of the collected dataset, with performance evaluated based on metrics like accuracy, precision, recall, and AUC (Area Under the Curve).
+
+\subsection*{C. Model Validation}
+
+The model’s performance will be evaluated using retrospective data from various health databases. Existing models, such as the PLCOm2012, have demonstrated that age and smoking behavior are reliable predictors for lung disease, providing a solid foundation for further prediction.
+
+\section*{Expected Outcomes}
+
+\begin{itemize}
+    \item A reliable machine learning model capable of predicting lung disease risk based on simple demographic and smoking history variables.
+    \item An accessible tool for clinicians and public health professionals to identify high-risk individuals for targeted screening and preventive measures.
+\end{itemize}
+
+\section*{References}
+
+Academic.oup.com. (n.d.). Detailed analysis of lung cancer predictive models. \textit{JNCI Cancer Spectrum}. Retrieved from \url{https://academic.oup.com/jncics/article/3/2/pkz014/5479596}
+
+PLOS Medicine. (2019). Studies comparing different lung cancer risk prediction models and their performance. \textit{PLOS Medicine}, \textit{16}(3), e1002799. \url{https://doi.org/10.1371/journal.pmed.1002799}
+
+Cancer Epidemiology. (2021). Machine learning models for predicting lung cancer risk. \textit{Cancer Epidemiology, Biomarkers \& Prevention}, \textit{30}(4), 676-684. \url{https://doi.org/10.1158/1055-9965.EPI-20-1467}
+
+\end{document}
